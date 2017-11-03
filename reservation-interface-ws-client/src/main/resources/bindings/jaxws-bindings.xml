@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jaxws:bindings version="2.3.1"
+	wsdlLocation="../wsdl/car-park.wsdl" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:jaxws="http://java.sun.com/xml/ns/jaxws"
+	xmlns:jxb="http://java.sun.com/xml/ns/jaxb">
+
+	<jaxws:enableWrapperStyle>false</jaxws:enableWrapperStyle>
+
+	<jaxws:package name="pl.hycom.training.reservation.integration.ws.api" />
+
+	<jaxws:bindings node="wsdl:definitions/wsdl:types/xs:schema[starts-with(@targetNamespace,'http')]">
+		<jxb:schemaBindings>
+			<jxb:package name="pl.hycom.training.reservation.integration.ws.api" />
+		</jxb:schemaBindings>
+	</jaxws:bindings>
+
+	<jaxws:bindings node="wsdl:definitions/wsdl:portType">
+		<jaxws:class name="ICarParkWS" />
+	</jaxws:bindings>
+</jaxws:bindings>

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<carPark>
+	<parking id="1" name="Jaracza 40" description="Jaracza 40 opis">
+		<level id="1">
+			<row id="1">
+				<parkingSpace id="1" placeNumber="A1" forDisable="false" taken="true" />
+				<parkingSpace id="2" placeNumber="A2" forDisable="false" taken="true" />
+				<parkingSpace id="3" placeNumber="A3" forDisable="false" taken="true" />
+				<parkingSpace id="4" placeNumber="A4" forDisable="false" taken="true" />
+				<parkingSpace id="5" placeNumber="A5" forDisable="false" taken="true" />
+			</row>
+			<row id="2">
+				<parkingSpace id="6" placeNumber="B1" forDisable="false" taken="true" />
+				<parkingSpace id="7" placeNumber="B2" forDisable="true" taken="false" />
+				<parkingSpace id="8" placeNumber="B3" forDisable="false" taken="true" />
+				<parkingSpace id="9" placeNumber="B4" forDisable="true" taken="true" />
+			</row>
+			<row id="3">
+				<parkingSpace id="10" placeNumber="C1" forDisable="false" taken="true" />
+				<parkingSpace id="11" placeNumber="C2" forDisable="true" taken="false" />
+				<parkingSpace id="12" placeNumber="C3" forDisable="false" taken="true" />
+				<parkingSpace id="13" placeNumber="C4" forDisable="true" taken="true" />
+				<parkingSpace id="14" placeNumber="C5" forDisable="true" taken="true" />
+				<parkingSpace id="15" placeNumber="C6" forDisable="true" taken="true" />
+			</row>
+		</level>
+		<level id="2">
+			<row id="4">
+				<parkingSpace id="16" placeNumber="A1" forDisable="false" taken="true" />
+				<parkingSpace id="17" placeNumber="A2" forDisable="false" taken="false" />
+				<parkingSpace id="18" placeNumber="A3" forDisable="true" taken="true" />
+				<parkingSpace id="19" placeNumber="A4" forDisable="false" taken="true" />
+				<parkingSpace id="20" placeNumber="A5" forDisable="true" taken="true" />
+				<parkingSpace id="21" placeNumber="A6" forDisable="false" taken="false" />
+			</row>
+			<row id="5">
+				<parkingSpace id="22" placeNumber="B1" forDisable="false" taken="true" />
+				<parkingSpace id="23" placeNumber="B2" forDisable="true" taken="true" />
+				<parkingSpace id="24" placeNumber="B3" forDisable="false" taken="false" />
+				<parkingSpace id="25" placeNumber="B4" forDisable="true" taken="true" />
+			</row>
+			<row id="6">
+				<parkingSpace id="26" placeNumber="C1" forDisable="false" taken="true" />
+				<parkingSpace id="27" placeNumber="C2" forDisable="true" taken="true" />
+				<parkingSpace id="28" placeNumber="C3" forDisable="false" taken="false" />
+				<parkingSpace id="29" placeNumber="C4" forDisable="true" taken="true" />
+			</row>
+			<row id="7">
+				<parkingSpace id="30" placeNumber="D1" forDisable="false" taken="true" />
+				<parkingSpace id="31" placeNumber="D2" forDisable="true" taken="true" />
+				<parkingSpace id="32" placeNumber="D3" forDisable="false" taken="false" />
+				<parkingSpace id="33" placeNumber="D4" forDisable="true" taken="true" />
+			</row>
+		</level>
+	</parking>
+
+	<parking id="2" name="Narutowicza 43" description="Narutowicza 43 opis">
+		<level id="3">
+			<row id="8">
+				<parkingSpace id="34" placeNumber="A1" forDisable="false" taken="true" />
+				<parkingSpace id="35" placeNumber="A2" forDisable="true" taken="false" />
+				<parkingSpace id="36" placeNumber="A3" forDisable="false" taken="true" />
+				<parkingSpace id="37" placeNumber="A4" forDisable="false" taken="false" />
+				<parkingSpace id="38" placeNumber="A5" forDisable="false" taken="true" />
+			</row>
+			<row id="9">
+				<parkingSpace id="39" placeNumber="B1" forDisable="false" taken="false" />
+				<parkingSpace id="40" placeNumber="B2" forDisable="false" taken="false" />
+				<parkingSpace id="41" placeNumber="B3" forDisable="false" taken="false" />
+			</row>
+			<row id="10">
+				<parkingSpace id="42" placeNumber="C1" forDisable="false" taken="true" />
+				<parkingSpace id="43" placeNumber="C2" forDisable="true" taken="false" />
+				<parkingSpace id="44" placeNumber="C3" forDisable="false" taken="true" />
+				<parkingSpace id="45" placeNumber="C4" forDisable="false" taken="false" />
+			</row>
+			<row id="11">
+				<parkingSpace id="46" placeNumber="D1" forDisable="false" taken="false" />
+				<parkingSpace id="47" placeNumber="D2" forDisable="false" taken="false" />
+				<parkingSpace id="48" placeNumber="D3" forDisable="false" taken="false" />
+			</row>
+		</level>
+		<level id="4">
+			<row id="12">
+				<parkingSpace id="49" placeNumber="A1" forDisable="false" taken="true" />
+				<parkingSpace id="50" placeNumber="A2" forDisable="false" taken="false" />
+				<parkingSpace id="51" placeNumber="A3" forDisable="false" taken="true" />
+				<parkingSpace id="52" placeNumber="A4" forDisable="false" taken="true" />
+			</row>
+			<row id="13">
+				<parkingSpace id="53" placeNumber="B1" forDisable="false" taken="false" />
+				<parkingSpace id="54" placeNumber="B2" forDisable="false" taken="true" />
+			</row>
+		</level>
+	</parking>
+	<parking id="3" name="Narutowicza 69/1" description="Narutowicza 69/1 opis">
+		<level id="5">
+			<row id="14">
+				<parkingSpace id="55" placeNumber="A1" forDisable="false" taken="true" />
+				<parkingSpace id="56" placeNumber="A2" forDisable="true" taken="false" />
+				<parkingSpace id="57" placeNumber="A3" forDisable="false" taken="true" />
+				<parkingSpace id="58" placeNumber="A4" forDisable="false" taken="false" />
+				<parkingSpace id="59" placeNumber="A5" forDisable="false" taken="true" />
+			</row>
+			<row id="15">
+				<parkingSpace id="60" placeNumber="B1" forDisable="false" taken="false" />
+				<parkingSpace id="61" placeNumber="B2" forDisable="false" taken="false" />
+				<parkingSpace id="62" placeNumber="B3" forDisable="false" taken="false" />
+				<parkingSpace id="63" placeNumber="B4" forDisable="false" taken="true" />
+				<parkingSpace id="64" placeNumber="B5" forDisable="false" taken="false" />
+			</row>
+		</level>
+		<level id="6">
+			<row id="16">
+				<parkingSpace id="65" placeNumber="A1" forDisable="false" taken="true" />
+				<parkingSpace id="66" placeNumber="A2" forDisable="false" taken="false" />
+				<parkingSpace id="67" placeNumber="A3" forDisable="false" taken="true" />
+				<parkingSpace id="68" placeNumber="A4" forDisable="false" taken="true" />
+			</row>
+			<row id="17">
+				<parkingSpace id="69" placeNumber="B1" forDisable="false" taken="false" />
+				<parkingSpace id="70" placeNumber="B2" forDisable="false" taken="true" />
+				<parkingSpace id="71" placeNumber="B3" forDisable="false" taken="false" />
+				<parkingSpace id="72" placeNumber="B4" forDisable="false" taken="true" />
+				<parkingSpace id="73" placeNumber="B5" forDisable="false" taken="true" />
+			</row>
+		</level>
+	</parking>
+	<parking id="4" name="Sienkiewicza 5" description="Sienkiewicza 5">
+		<level id="7">
+			<row id="18">
+				<parkingSpace id="74" placeNumber="A1" forDisable="false" taken="true" />
+				<parkingSpace id="75" placeNumber="A2" forDisable="true" taken="false" />
+				<parkingSpace id="76" placeNumber="A3" forDisable="false" taken="true" />
+				<parkingSpace id="77" placeNumber="A4" forDisable="false" taken="false" />
+				<parkingSpace id="78" placeNumber="A5" forDisable="false" taken="true" />
+			</row>
+			<row id="19">
+				<parkingSpace id="79" placeNumber="B1" forDisable="false" taken="false" />
+				<parkingSpace id="80" placeNumber="B2" forDisable="false" taken="false" />
+				<parkingSpace id="81" placeNumber="B3" forDisable="false" taken="false" />
+				<parkingSpace id="82" placeNumber="B4" forDisable="false" taken="true" />
+			</row>
+		</level>
+		<level id="8">
+			<row id="20">
+				<parkingSpace id="83" placeNumber="A1" forDisable="false" taken="true" />
+				<parkingSpace id="84" placeNumber="A2" forDisable="false" taken="false" />
+				<parkingSpace id="85" placeNumber="A3" forDisable="false" taken="true" />
+				<parkingSpace id="86" placeNumber="A4" forDisable="false" taken="true" />
+				<parkingSpace id="87" placeNumber="A5" forDisable="false" taken="false" />
+				<parkingSpace id="88" placeNumber="A6" forDisable="false" taken="true" />
+			</row>
+			<row id="21">
+				<parkingSpace id="89" placeNumber="B1" forDisable="false" taken="false" />
+				<parkingSpace id="90" placeNumber="B2" forDisable="false" taken="true" />
+				<parkingSpace id="91" placeNumber="B3" forDisable="false" taken="false" />
+			</row>
+		</level>
+	</parking>
+	<parking id="5" name="Teatr Wielki" description="Teatr Wielki">
+		<level id="9">
+			<row id="22">
+				<parkingSpace id="92" placeNumber="A1" forDisable="false" taken="true" />
+				<parkingSpace id="93" placeNumber="A2" forDisable="true" taken="false" />
+				<parkingSpace id="94" placeNumber="A3" forDisable="false" taken="true" />
+				<parkingSpace id="95" placeNumber="A4" forDisable="false" taken="false" />
+			</row>
+			<row id="23">
+				<parkingSpace id="96" placeNumber="B1" forDisable="false" taken="false" />
+				<parkingSpace id="97" placeNumber="B2" forDisable="false" taken="false" />
+				<parkingSpace id="98" placeNumber="B3" forDisable="false" taken="false" />
+			</row>
+		</level>
+		<level id="10">
+			<row id="24">
+				<parkingSpace id="99" placeNumber="A1" forDisable="false" taken="true" />
+				<parkingSpace id="100" placeNumber="A2" forDisable="false" taken="false" />
+				<parkingSpace id="101" placeNumber="A3" forDisable="false" taken="true" />
+				<parkingSpace id="102" placeNumber="A4" forDisable="false" taken="true" />
+				<parkingSpace id="103" placeNumber="A5" forDisable="false" taken="false" />
+				<parkingSpace id="104" placeNumber="A6" forDisable="false" taken="true" />
+				<parkingSpace id="105" placeNumber="A7" forDisable="false" taken="true" />
+			</row>
+			<row id="25">
+				<parkingSpace id="106" placeNumber="B1" forDisable="false" taken="false" />
+				<parkingSpace id="107" placeNumber="B2" forDisable="false" taken="true" />
+				<parkingSpace id="108" placeNumber="B3" forDisable="false" taken="false" />
+				<parkingSpace id="109" placeNumber="B4" forDisable="false" taken="true" />
+			</row>
+		</level>
+	</parking>
+</carPark>

@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.hycom.pl/car-park/wsdl/carPark"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" name="CarParkService"
+	targetNamespace="http://www.hycom.pl/car-park/wsdl/carPark">
+	<types>
+		<xs:schema xmlns:tns="http://www.hycom.pl/car-park/wsdl/carPark"
+			xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
+			elementFormDefault="qualified" targetNamespace="http://www.hycom.pl/car-park/wsdl/carPark">
+			
+			<xs:element name="error" type="tns:error"/>
+			<xs:element name="errorStatus" type="tns:errorStatus"/>
+
+			<xs:element name="parking" type="tns:parking" />
+			<xs:element name="level" type="tns:level" />
+			<xs:element name="row" type="tns:row" />
+			<xs:element name="space" type="tns:space" />
+
+			<xs:element name="getParkingList" type="tns:getParkingList" />
+			<xs:element name="getParkingListResponse" type="tns:getParkingListResponse" />
+
+			<xs:element name="getParkingDetails" type="tns:getParkingDetails" />
+			<xs:element name="getParkingDetailsResponse" type="tns:getParkingDetailsResponse" />
+
+			<xs:element name="getLevelDetails" type="tns:getLevelDetails" />
+			<xs:element name="getLevelDetailsResponse" type="tns:getLevelDetailsResponse" />
+
+			<xs:element name="bookPlace" type="tns:bookPlace" />
+			<xs:element name="bookPlaceResponse" type="tns:bookPlaceResponse" />
+
+			<xs:element name="releasePlace" type="tns:releasePlace" />
+			<xs:element name="releasePlaceResponse" type="tns:releasePlaceResponse" />
+			
+			<xs:simpleType name="errorStatus">
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="SUCCESS"/>
+					<xs:enumeration value="WARNING"/>
+					<xs:enumeration value="ERROR"/>
+				</xs:restriction>
+			</xs:simpleType>
+						
+			<xs:complexType name="error">
+				<xs:sequence>
+					<xs:element name="status" type="tns:errorStatus"/>
+					<xs:element name="message" type="xs:string"/>
+					<xs:element name="messageKey" type="xs:string"/>
+					<xs:element name="code" type="xs:int" default="0"/>
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="space">
+				<xs:sequence>
+					<xs:element name="id" type="xs:int" />
+					<xs:element name="number" type="xs:string" />
+					<xs:element name="forDisable" type="xs:boolean" default="false" />
+					<xs:element name="taken" type="xs:boolean" default="false" />
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="row">
+				<xs:sequence>
+					<xs:element name="id" type="xs:int" />
+					<xs:element name="spaces" type="tns:space" minOccurs="0"
+						maxOccurs="unbounded" />
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="level">
+				<xs:sequence>
+					<xs:element name="id" type="xs:int" />
+					<xs:element name="order" type="xs:int" default="0"/>
+					<xs:element name="rows" type="tns:row" minOccurs="0" maxOccurs="unbounded" />
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="parking">
+				<xs:sequence>
+					<xs:element name="id" type="xs:int" />
+					<xs:element name="name" type="xs:string" />
+					<xs:element name="description" type="xs:string" />
+					<xs:element name="levels" type="tns:level" minOccurs="0"
+						maxOccurs="unbounded" />
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="getParkingList" />
+			<xs:complexType name="getParkingListResponse">
+				<xs:sequence>
+					<xs:element name="error" type="tns:error"/>
+					<xs:element name="parkingList" type="tns:parking"
+						minOccurs="0" maxOccurs="unbounded" />
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="getParkingDetails">
+				<xs:sequence>
+					<xs:element name="parkingId" type="xs:int" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="getParkingDetailsResponse">
+				<xs:sequence>
+					<xs:element name="error" type="tns:error"/>
+					<xs:element name="parking" type="tns:parking" minOccurs="0" maxOccurs="1" />
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="getLevelDetails">
+				<xs:sequence>
+					<xs:element name="parkingId" type="xs:int" />
+					<xs:element name="levelId" type="xs:int" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="getLevelDetailsResponse">
+				<xs:sequence>
+					<xs:element name="error" type="tns:error"/>
+					<xs:element name="level" type="tns:level" minOccurs="0" maxOccurs="1" />
+					<xs:element name="parking" type="tns:parking" minOccurs="0" maxOccurs="1" />
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="bookPlace">
+				<xs:sequence>
+					<xs:element name="parkingId" type="xs:int" />
+					<xs:element name="levelId" type="xs:int" />
+					<xs:element name="rowId" type="xs:int" />
+					<xs:element name="spaceId" type="xs:int" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="bookPlaceResponse">
+				<xs:sequence>
+					<xs:element name="error" type="tns:error"/>
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="releasePlace">
+				<xs:sequence>
+					<xs:element name="parkingId" type="xs:int" />
+					<xs:element name="levelId" type="xs:int" />
+					<xs:element name="rowId" type="xs:int" />
+					<xs:element name="spaceId" type="xs:int" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="releasePlaceResponse">
+				<xs:sequence>
+					<xs:element name="error" type="tns:error"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:schema>
+	</types>
+	<message name="getParkingList">
+		<part name="getParkingList" element="tns:getParkingList">
+		</part>
+	</message>
+	<message name="getParkingListResponse">
+		<part name="getParkingListResponse" element="tns:getParkingListResponse">
+		</part>
+	</message>
+
+	<message name="getParkingDetails">
+		<part name="getParkingDetails" element="tns:getParkingDetails">
+		</part>
+	</message>
+	<message name="getParkingDetailsResponse">
+		<part name="getParkingDetailsResponse" element="tns:getParkingDetailsResponse">
+		</part>
+	</message>
+
+	<message name="getLevelDetails">
+		<part name="getLevelDetails" element="tns:getLevelDetails">
+		</part>
+	</message>
+	<message name="getLevelDetailsResponse">
+		<part name="getLevelDetailsResponse" element="tns:getLevelDetailsResponse">
+		</part>
+	</message>
+
+	<message name="bookPlace">
+		<part name="bookPlace" element="tns:bookPlace">
+		</part>
+	</message>
+	<message name="bookPlaceResponse">
+		<part name="bookPlaceResponse" element="tns:bookPlaceResponse">
+		</part>
+	</message>
+
+	<message name="releasePlace">
+		<part name="releasePlace" element="tns:releasePlace">
+		</part>
+	</message>
+	<message name="releasePlaceResponse">
+		<part name="releasePlaceResponse" element="tns:releasePlaceResponse">
+		</part>
+	</message>
+	<portType name="carPark">
+		<operation name="getParkingList">
+			<input name="getParkingList" message="tns:getParkingList">
+			</input>
+			<output name="getParkingListResponse" message="tns:getParkingListResponse">
+			</output>
+		</operation>
+		<operation name="getParkingDetails">
+			<input name="getParkingDetails" message="tns:getParkingDetails">
+			</input>
+			<output name="getParkingDetailsResponse" message="tns:getParkingDetailsResponse">
+			</output>
+		</operation>
+		<operation name="getLevelDetails">
+			<input name="getLevelDetails" message="tns:getLevelDetails">
+			</input>
+			<output name="getLevelDetailsResponse" message="tns:getLevelDetailsResponse">
+			</output>
+		</operation>
+		<operation name="bookPlace">
+			<input name="bookPlace" message="tns:bookPlace">
+			</input>
+			<output name="bookPlaceResponse" message="tns:bookPlaceResponse">
+			</output>
+		</operation>
+		<operation name="releasePlace">
+			<input name="releasePlace" message="tns:releasePlace">
+			</input>
+			<output name="releasePlaceResponse" message="tns:releasePlaceResponse">
+			</output>
+		</operation>
+	</portType>
+
+	<binding name="CarParkServiceSoapBinding" type="tns:carPark">
+		<soap:binding style="document"
+			transport="http://schemas.xmlsoap.org/soap/http" />
+		<operation name="getParkingList">
+			<soap:operation
+				soapAction="http://www.hycom.pl/car-park/wsdl/carPark/getParkingList" />
+			<input name="getParkingList">
+				<soap:body use="literal" />
+			</input>
+			<output name="getParkingListResponse">
+				<soap:body use="literal" />
+			</output>
+		</operation>
+		<operation name="getParkingDetails">
+			<soap:operation
+				soapAction="http://www.hycom.pl/car-park/wsdl/carPark/getParkingDetails" />
+			<input name="getParkingDetails">
+				<soap:body use="literal" />
+			</input>
+			<output name="getParkingDetailsResponse">
+				<soap:body use="literal" />
+			</output>
+		</operation>
+		<operation name="getLevelDetails">
+			<soap:operation
+				soapAction="http://www.hycom.pl/car-park/wsdl/carPark/getLevelDetails" />
+			<input name="getLevelDetails">
+				<soap:body use="literal" />
+			</input>
+			<output name="getLevelDetailsResponse">
+				<soap:body use="literal" />
+			</output>
+		</operation>
+		<operation name="bookPlace">
+			<soap:operation soapAction="http://www.hycom.pl/car-park/wsdl/carPark/bookPlace" />
+			<input name="bookPlace">
+				<soap:body use="literal" />
+			</input>
+			<output name="bookPlaceResponse">
+				<soap:body use="literal" />
+			</output>
+		</operation>
+		<operation name="releasePlace">
+			<soap:operation
+				soapAction="http://www.hycom.pl/car-park/wsdl/carPark/releasePlace" />
+			<input name="releasePlace">
+				<soap:body use="literal" />
+			</input>
+			<output name="releasePlaceResponse">
+				<soap:body use="literal" />
+			</output>
+		</operation>
+	</binding>
+	<service name="CarParkService">
+		<port name="CarParkWsPort" binding="tns:CarParkServiceSoapBinding">
+			<soap:address location="http://localhost:9090/CarParkWs" />
+		</port>
+	</service>
+</definitions>

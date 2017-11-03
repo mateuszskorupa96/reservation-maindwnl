@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Configuration status="debug">
+	<Properties>
+		<Property name="logPattern">[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c- %msg%n</Property>
+	</Properties>
+	<Appenders>
+		<Console name="CONSOLE" target="SYSTEM_OUT">
+			<PatternLayout>
+				<pattern>${logPattern}</pattern>
+			</PatternLayout>
+		</Console>
+	</Appenders>
+	<Loggers>
+		<Logger name="pl.hycom.training.reservation" additivity="false" level="debug">
+			<AppenderRef ref="CONSOLE" />
+		</Logger>
+		<Root level="info">
+			<AppenderRef ref="CONSOLE" />
+		</Root>
+	</Loggers>
+</Configuration>

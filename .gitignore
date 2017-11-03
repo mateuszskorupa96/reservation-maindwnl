@@ -1,0 +1,10 @@
+# Ignore Intellij Idea project files
+**/.idea
+**/*.iml
+# Ignore eclipse project files
+**/.classpath
+**/.externalToolBuilders
+**/.project
+**/.settings
+**/target
+**/MANIFEST.MF
